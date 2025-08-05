@@ -1,1 +1,8 @@
-test('sample', () => { expect(1 + 1).toBe(2); });
+const assert = require('assert');
+
+describe('Sample Test', () => {
+  it('should pass', () => {
+    assert.strictEqual(1 + 1, 2);
+  });
+});
+
