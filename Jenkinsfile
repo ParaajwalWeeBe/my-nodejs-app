@@ -1,15 +1,16 @@
 pipeline {
   agent any
+
+  tools {
+    nodejs 'NODEJS'
+  }
+
   stages {
     stage('Checkout') {
       steps {
         git branch: 'main', url: 'https://github.com/ParaajwalWeeBe/my-nodejs-app.git'
       }
     }
-    tools {
-      nodejs 'NODEJS'
-    }
-
     stage('Install Dependencies') {
       steps {
         sh 'npm install'
